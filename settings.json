@@ -1,0 +1,8 @@
+{
+  "email": "vishal27.rs@outlook.com",
+  "base_directory": ".",
+  "data_directory": "data",
+  "navigation_file": "navigation.yml",
+  "profile_image_size": "250px",
+  "profile_file": "profile.yml"
+}
