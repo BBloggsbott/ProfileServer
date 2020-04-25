@@ -3,6 +3,7 @@
   "base_directory": ".",
   "data_directory": "data",
   "navigation_file": "navigation.yml",
+  "files_directory": "files",
   "profile_image_size": "250px",
   "profile_file": "profile.yml"
 }

@@ -52,6 +52,7 @@ class PropertyService {
         properties.dataDirectory = Paths.get(properties.baseDir, properties.dataDirectory).toString()
         properties.navigationFile = Paths.get(properties.dataDirectory, properties.navigationFile).toString()
         properties.profileFile = Paths.get(properties.dataDirectory, properties.profileFile).toString()
+        properties.fileDirectory = Paths.get(properties.baseDir, properties.fileDirectory).toString()
     }
 
 }

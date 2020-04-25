@@ -11,5 +11,6 @@ data class PropertiesDTO(
         @JsonProperty("navigation_file") var navigationFile: String,
         @JsonProperty("profile_file") var profileFile: String,
         @JsonProperty("profile_image_url") var imageUrl: String?,
-        @JsonProperty("profile_image_size") var imageSize: String?
+        @JsonProperty("profile_image_size") var imageSize: String?,
+        @JsonProperty("files_directory") var fileDirectory: String?
 )
