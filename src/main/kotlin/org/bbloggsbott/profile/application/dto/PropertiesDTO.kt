@@ -1,6 +1,7 @@
 package org.bbloggsbott.profile.application.dto
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect
+import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonProperty
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
@@ -12,5 +13,9 @@ data class PropertiesDTO(
         @JsonProperty("profile_file") var profileFile: String,
         @JsonProperty("profile_image_url") var imageUrl: String?,
         @JsonProperty("profile_image_size") var imageSize: String?,
-        @JsonProperty("files_directory") var fileDirectory: String?
-)
+        @JsonProperty("files_directory") var fileDirectory: String?,
+        @JsonProperty("pages_directory") var pagesDirectory: String?,
+        @JsonProperty("datetimeformat") var dateTimeFormat: String?
+){
+    @JsonIgnore var absolutePagePath: String? = null
+}

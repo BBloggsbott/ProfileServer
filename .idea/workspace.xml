@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e1c02ae-14db-466f-a572-116e4ba4e7dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files/dummy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/sample.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/media/controller/MediaController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/media/service/MediaService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/sample.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/sample.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/sample_directory/sample2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/constants/PageConstants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/extension/ApplicationConstants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/pages/dto/PageDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/pages/dto/PagePathDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/pages/service/MarkdownService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/pages/service/PagePathService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/profile.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/application/dto/PropertiesDTO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/application/dto/PropertiesDTO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/application/service/PropertyService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/application/service/PropertyService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/extension/StringExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/extension/StringExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/main/controller/MainController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/main/controller/MainController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/profile.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/profile.kotlin_module" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -43,6 +54,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -57,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="org.bbloggsbott.profile.pages.dto" />
       <recent name="org.bbloggsbott.profile.main.service" />
     </key>
   </component>
@@ -80,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587575062681</updated>
       <workItem from="1587575066959" duration="4073000" />
-      <workItem from="1587584017313" duration="14969000" />
+      <workItem from="1587584017313" duration="28523000" />
     </task>
     <servers />
   </component>
@@ -91,30 +104,34 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="624" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1587824634262">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="624" y="248" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1587824634262" />
     <state x="367" y="456" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1587584287995">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="367" y="456" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587584287995" />
-    <state x="610" y="310" width="715" height="429" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1587630606971">
+    <state x="610" y="310" width="715" height="429" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1587835508963">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="610" y="310" width="715" height="429" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587630606971" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1587815412039">
+    <state x="610" y="310" width="715" height="429" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587835508963" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1587837723681">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1587815412039" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1587815412038">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1587837723681" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1587837723680">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1587815412038" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1587815412037">
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1587837723680" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1587837723679">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1587815412037" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1587815412039">
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1587837723679" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1587837723681">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1587815412039" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1587837723681" />
     <state width="1638" height="295" key="GridCell.Tab.1.bottom" timestamp="1587577858665">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -135,5 +152,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1587577595284" />
+    <state x="505" y="233" key="search.everywhere.popup" timestamp="1587824627967">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1587824627967" />
   </component>
 </project>

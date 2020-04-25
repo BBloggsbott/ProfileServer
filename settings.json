@@ -4,6 +4,8 @@
   "data_directory": "data",
   "navigation_file": "navigation.yml",
   "files_directory": "files",
+  "pages_directory": "pages",
   "profile_image_size": "250px",
-  "profile_file": "profile.yml"
+  "profile_file": "profile.yml",
+  "datetimeformat": "dd-MM-yyyy"
 }

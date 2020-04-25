@@ -2,6 +2,7 @@ package org.bbloggsbott.profile.application.service
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.bbloggsbott.profile.application.dto.PropertiesDTO
+import org.bbloggsbott.profile.extension.DEFAULT_DATETIME_FORMAT
 import org.bbloggsbott.profile.extension.md5
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
@@ -32,6 +33,9 @@ class PropertyService {
         properties = mapper.readValue(settingsFile, PropertiesDTO::class.java)
         createGravatarURL()
         processPaths()
+        if (properties.dateTimeFormat == null){
+            properties.dateTimeFormat = DEFAULT_DATETIME_FORMAT
+        }
     }
 
     fun getProperties(): PropertiesDTO = properties
@@ -53,6 +57,7 @@ class PropertyService {
         properties.navigationFile = Paths.get(properties.dataDirectory, properties.navigationFile).toString()
         properties.profileFile = Paths.get(properties.dataDirectory, properties.profileFile).toString()
         properties.fileDirectory = Paths.get(properties.baseDir, properties.fileDirectory).toString()
+        properties.absolutePagePath = Paths.get(properties.baseDir, properties.pagesDirectory).toString()
     }
 
 }
