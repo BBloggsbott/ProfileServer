@@ -1,5 +1,8 @@
 package org.bbloggsbott.profile.pages.service
 
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.newSingleThreadContext
 import org.bbloggsbott.profile.application.service.PropertyService
 import org.bbloggsbott.profile.pages.dto.PageDTO
 import org.bbloggsbott.profile.pages.dto.PagePathDTO
@@ -7,12 +10,9 @@ import org.bbloggsbott.profile.pages.dto.PageResponseDTO
 import org.bbloggsbott.profile.pages.exception.PageNotFoundException
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
-import org.springframework.web.client.HttpStatusCodeException
-import org.springframework.web.server.ResponseStatusException
 import java.io.File
-import java.nio.file.Paths
+import java.nio.file.*
 import javax.annotation.PostConstruct
 
 @Service
@@ -38,11 +38,20 @@ class PagePathService {
         directoryPaths = HashMap<String, ArrayList<String>>()
         basePaths = HashSet<String>()
         val pagesDirectory = propertyService.getProperties().absolutePagePath
+        createDirectoryWatching(pagesDirectory!!)
         var directories = setPathsInDirectoryAndGetChildDirectories(File(pagesDirectory))
+        createWatchersForDirectories(directories)
         do {
             directories = directories.map { setPathsInDirectoryAndGetChildDirectories(it) }.flatten()
+            createWatchersForDirectories(directories)
         } while (directories.size != 0)
         logger.info("Found ${pagePaths.pathMap.size} pages and ${directoryPaths.size} intermediate paths")
+    }
+
+    fun createWatchersForDirectories(directories: List<File>){
+        for (directory in directories){
+            createDirectoryWatching(directory.absolutePath)
+        }
     }
 
     fun setPathsInDirectoryAndGetChildDirectories(directory: File): List<File>{
@@ -107,6 +116,30 @@ class PagePathService {
             throw PageNotFoundException("Page Not found", pageUrl)
         }
         return pageResponse
+    }
+
+    fun createDirectoryWatching(directoryName: String){
+        logger.info("Creating watch service for $directoryName")
+        val watchService: WatchService = FileSystems.getDefault().newWatchService()
+        val path: Path = Paths.get(directoryName)
+        path.register(
+                watchService,
+                StandardWatchEventKinds.ENTRY_CREATE,
+                StandardWatchEventKinds.ENTRY_DELETE,
+                StandardWatchEventKinds.ENTRY_MODIFY
+        )
+        GlobalScope.launch(newSingleThreadContext("$directoryName Watcher")){
+            var watchKey: WatchKey? = null
+            logger.info("Starting directory monitoring for $directoryName")
+            watchKey = watchService.take()
+            while (watchKey != null){
+                for (event in watchKey.pollEvents()){
+                    logger.info("Event: ${event.kind()} File: ${event.context()}")
+                }
+                watchKey.reset()
+                watchKey = watchService.take()
+            }
+        }
     }
 
 }
