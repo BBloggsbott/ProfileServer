@@ -6,7 +6,7 @@ import java.util.*
 
 data class PageDTO(@JsonIgnore val pagePath: String){
     @JsonProperty("title") var  title: String? = null
-    @JsonProperty("permalink") var permalink: String? = null
+    @JsonIgnore @JsonProperty("permalink") var permalink: String? = null
     @JsonProperty("date") var date: Date? = null
     @JsonProperty("paper_url") var paperUrl: String? = null
     @JsonProperty("content_md") var contentMD: String? = null

@@ -1,7 +1,9 @@
 package org.bbloggsbott.profile.main.controller
 
 import org.bbloggsbott.profile.application.service.PropertyService
+import org.bbloggsbott.profile.main.dto.MainResponseDTO
 import org.bbloggsbott.profile.main.dto.ProfileDTO
+import org.bbloggsbott.profile.main.service.MainService
 import org.bbloggsbott.profile.main.service.NavigationService
 import org.bbloggsbott.profile.main.service.ProfileService
 import org.bbloggsbott.profile.pages.dto.PageDTO
@@ -17,18 +19,10 @@ import java.io.File
 class MainController {
 
     @Autowired
-    lateinit var propertyService: PropertyService
-    @Autowired
-    lateinit var navigationService: NavigationService
-    @Autowired
-    lateinit var profileService: ProfileService
-    @Autowired
-    lateinit var markdownService: MarkdownService
-    @Autowired
-    lateinit var pagePathService: PagePathService
+    lateinit var mainService: MainService
 
-    @GetMapping("/sample")
-    fun sampleController(): PagePathDTO{
-        return pagePathService.pagePaths
+    @GetMapping("/")
+    fun sampleController(): MainResponseDTO{
+        return mainService.getMainResponse()
     }
 }

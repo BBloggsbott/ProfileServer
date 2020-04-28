@@ -7,5 +7,5 @@ import lombok.Setter
 
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 data class NavigationDTO(
-        @JsonProperty("navigation") val navigation: List<NavigationItemDTO>
+        @JsonProperty("paths") val navigation: List<NavigationItemDTO>
 )

@@ -8,16 +8,16 @@ import org.springframework.stereotype.Component
 class ProfileUtil {
 
     @Value("\${github.baseurl}")
-    lateinit var githubBaseUrl: String
+    private lateinit var githubBaseUrl: String
 
     @Value("\${gitlab.baseurl}")
-    lateinit var gitlabBaseUrl: String
+    private lateinit var gitlabBaseUrl: String
 
     @Value("\${linkedin.profile.baseurl}")
-    lateinit var linkedinBaseUrl: String
+    private lateinit var linkedinBaseUrl: String
 
     @Value("\${twitter.baseurl}")
-    lateinit var twitterBaseUrl: String
+    private lateinit var twitterBaseUrl: String
 
     private fun getGitHubUrlFromUsername(username: String) = githubBaseUrl + username.trim()
 

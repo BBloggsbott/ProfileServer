@@ -1,4 +1,4 @@
-navigation:
+paths:
   - title: "Some title"
     url: "https://github.com/BBloggsbott"
     ext: true

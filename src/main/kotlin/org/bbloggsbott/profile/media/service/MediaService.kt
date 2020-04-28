@@ -2,6 +2,7 @@ package org.bbloggsbott.profile.media.service
 
 import org.bbloggsbott.profile.application.dto.PropertiesDTO
 import org.bbloggsbott.profile.application.service.PropertyService
+import org.bbloggsbott.profile.media.exception.ResourceNotFoundException
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
@@ -22,17 +23,21 @@ class MediaService {
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun getFileAsByteArray(filename: String): ByteArray{
-        val filepath = Paths.get(propertiesDTO.fileDirectory, filename).toString()
-        logger.info("Getting file from $filepath")
-        val file = File(filepath)
+        val file = getFile(filename)
         if (!file.exists()){
-            throw FileNotFoundException("Requested media file not found")
+            throw ResourceNotFoundException("Requested media file not found", filename)
         }
         return file.readBytes()
     }
 
+    fun getFile(filename: String): File{
+        val filepath = Paths.get(propertiesDTO.fileDirectory, filename).toString()
+        logger.info("Getting file from $filepath")
+        return File(filepath)
+    }
+
     fun getMediaTypeFromFileName(filename: String): MediaType?{
-        val extension = filename.split(".")[1]
+        val extension = getFile(filename).extension
         when(extension){
             "pdf" -> return MediaType.APPLICATION_PDF
             "json" -> return MediaType.APPLICATION_JSON
