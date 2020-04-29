@@ -14,6 +14,11 @@ class PageController {
     @Autowired
     lateinit var pagePathService: PagePathService
 
+    @GetMapping("/routes")
+    fun getRoutes(): HashSet<String>{
+        return pagePathService.basePaths
+    }
+
     @GetMapping("/**")
     fun getPage(request: HttpServletRequest): PageResponseDTO{
         return pagePathService.getPageResponse(request.requestURI)
