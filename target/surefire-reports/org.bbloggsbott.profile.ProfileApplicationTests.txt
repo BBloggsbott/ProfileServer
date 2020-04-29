@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.bbloggsbott.profile.ProfileApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.14 s - in org.bbloggsbott.profile.ProfileApplicationTests
