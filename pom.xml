@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>org.bbloggsbott</groupId>
 	<artifactId>profile</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>profile</name>
 	<description>Backend for User Profile</description>
 

@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e1c02ae-14db-466f-a572-116e4ba4e7dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sample_directory/sample2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sample_directory/sample5.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/pages/controller/PageController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/pages/controller/PageController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/pages/service/PagePathService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/org/bbloggsbott/profile/pages/service/PagePathService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +83,7 @@
       <workItem from="1587988084413" duration="2070000" />
       <workItem from="1588050670501" duration="721000" />
       <workItem from="1588080939280" duration="8830000" />
-      <workItem from="1588149352130" duration="9828000" />
+      <workItem from="1588149352130" duration="12990000" />
     </task>
     <servers />
   </component>
@@ -98,6 +94,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="456" y="128" key="#ProfileApplication" timestamp="1588181500778">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="456" y="128" key="#ProfileApplication/0.0.1680.1050@0.0.1680.1050" timestamp="1588181500778" />
     <state x="624" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1587824634262">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -110,22 +110,22 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="610" y="310" width="715" height="429" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587835508963" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1588177183271">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1588183623932">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1588177183271" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1588177183270">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1588183623932" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1588183623931">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1588177183270" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1588177183269">
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1588183623931" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1588183623930">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1588177183269" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1588177183271">
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1588183623930" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1588183623931">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1588177183271" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1588183623931" />
     <state width="1638" height="295" key="GridCell.Tab.1.bottom" timestamp="1587577858665">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
